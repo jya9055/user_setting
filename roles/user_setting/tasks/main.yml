@@ -3,3 +3,7 @@
   register: myPass
 
 - command: echo "{{ '0' + myPass.stdout }}"
+  register: myPass
+  when: myPass.stdout < 100
+
+- command: echo "{{ myPass.stdout }}"
