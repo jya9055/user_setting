@@ -1,4 +1,4 @@
 - name: Create gmaster user
   debug:
     msg:
-      - "{{ ansible_default_ipv4.address | regex_replace('[0-9]{3}\.[0-9]{3}\.[0-9]{3}\.')}}"
+      - {{ ansible_default_ipv4.address | regex_replace('[0-9]{3}\.[0-9]{3}\.[0-9]{3}\.')}}
