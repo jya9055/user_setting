@@ -1,1 +1,1 @@
-- pass : "{{ ansible_default_ipv4.address | regex_replace('[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.') }}"
+pass : "{{ ansible_default_ipv4.address | regex_replace('[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.') }}"
