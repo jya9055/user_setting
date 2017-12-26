@@ -1,4 +1,4 @@
 - name: Create gmaster user
   debug:
     msg:
-      - "{{ ansible_default_ipv4.address }}"
+      - "{{ ansible_default_ipv4.address | type_debug  }}"
