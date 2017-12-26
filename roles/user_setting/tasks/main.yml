@@ -1,2 +1,3 @@
 - name: Create gmaster user
-  setup:
+  debug:
+    msg: {{ ansible_network }}
