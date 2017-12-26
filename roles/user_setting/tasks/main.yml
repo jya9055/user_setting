@@ -10,9 +10,8 @@
   register: myPass
   when: "{{myPass.stdout | regex_search('[0-9]{1}')}}"
 
-
 - name: Create gmaster user
   user:
-  name: gmaster
-  group: gmaster
-  password: "{{ 'zjvl' + '@' + 'aktmxj' + myPass.stdout + '!'}}"
+    name: gmaster
+    group: gmaster
+    password: "{{ 'zjvl' + '@' + 'aktmxj' + myPass.stdout + '!'}}"
