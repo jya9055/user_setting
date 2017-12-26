@@ -4,7 +4,6 @@
 
   user:
     name: gmaster
-    group: gmaster
     password: "{{ 'zjvl' + '@' + 'aktmxj' + '0' + myPass + '!'}}"
   when: "{{ myPass | regex_search('[0-9]{1}$') }}"
 
