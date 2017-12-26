@@ -2,6 +2,7 @@
   command: echo "{{ ansible_default_ipv4.address | regex_replace('[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.') }}"
   register: result
 
-- name: Echo pass
   set_fact: PASS="{{ result.stdout }}"
+  
+- name: Echo pass
   command: echo "{{ PASS }}"
