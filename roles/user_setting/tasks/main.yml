@@ -2,4 +2,4 @@
   user:
     name: gmaster
     group: gmaster
-    password: "{{ zjvl + @ + aktmxj + myPass.stdout + !}}"
+    password: "{{ zjvl + '@' + aktmxj + myPass.stdout + !}}"
