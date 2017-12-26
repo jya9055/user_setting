@@ -1,7 +1,6 @@
 - name: Create gmaster user
-  set_stats:
-    data:
-      myPass : {{ ansible_default_ipv4.address | regex_replace('[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.') }}
+  command: echo  "{{ ansible_default_ipv4.address | regex_replace('[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.') }}"
+  register: myPass
 
-- name: echo value
-  command: echo "{{ myPass }}"
+- name: echo myPass
+  command: echo "{{ myPass.stdout_lines }}"
