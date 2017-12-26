@@ -3,4 +3,4 @@
   register: myPass
 
 - name: echo myPass
-  command: echo "{{ myPass.stdout_lines }}"
+  command: echo "{{ myPass.stdout }}"
