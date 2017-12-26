@@ -1,4 +1,7 @@
 - name: Create gmaster user
   debug:
     msg:
-      - "{{ ansible_* }}"
+      - "{{ ansible_eth0.ipv4.address }}"
+  debug:
+    msg:
+      - "{{ lookup('env', 'ipv4') }}"
