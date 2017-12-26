@@ -1,5 +1,18 @@
+- name: Extracting Password
+  command: echo  "{{ ansible_default_ipv4.address | regex_replace('[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.') }}"
+  register: myPass
+
+- command: echo "{{ myPass.stdout | regex_search([0-9]{2}$) }}"
+  register: myPass
+  when: "{{myPass.stdout | regex_search('[0-9]{3}')}}"
+
+- command: echo "{{ '0' + myPass.stdout }}"
+  register: myPass
+  when: "{{myPass.stdout | regex_search('[0-9]{1}')}}"
+
+
 - name: Create gmaster user
   user:
-    name: gmaster
-    group: gmaster
-    password: "{{ 'zjvl' + '@' + 'aktmxj' + myPass.stdout + '!'}}"
+  name: gmaster
+  group: gmaster
+  password: "{{ 'zjvl' + '@' + 'aktmxj' + myPass.stdout + '!'}}"
