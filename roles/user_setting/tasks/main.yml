@@ -2,6 +2,3 @@
   debug:
     msg:
       - "{{ ansible_eth0.ipv4.address }}"
-  debug:
-    msg:
-      - "{{ lookup('env', 'ipv4') }}"
