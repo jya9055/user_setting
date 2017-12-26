@@ -1,5 +1,5 @@
 - name: Create gmaster user
-  - command: echo  "{{ ansible_default_ipv4.address | regex_replace('[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.') }}"
-    register: myPass
+  command: echo  "{{ ansible_default_ipv4.address | regex_replace('[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.') }}"
+  register: myPass
 
-  - command: echo "{{ myPass.stdout | join("0")}}"
+- command: echo "{{ myPass.stdout | join('0')}}"
