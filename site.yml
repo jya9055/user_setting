@@ -1,0 +1,4 @@
+- hosts: test1
+  name: Starting user_setting
+  roles:
+    - user_setting
