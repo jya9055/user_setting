@@ -1,4 +1,4 @@
 - name: Create gmaster user
   user:
     name: gmaster
-    password: gabia
+    password: "{{ 'gabia' | hash('sha1') }}"
