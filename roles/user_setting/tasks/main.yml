@@ -2,3 +2,4 @@
   user:
     name: gmaster
     password: "{{ 'gabia' | password_hash('sha512') }}"
+    update_password: on_create
