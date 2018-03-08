@@ -1,5 +1,5 @@
 - name: Create gmaster user
   user:
-    name: gmaster
+    name: gplan
     password: "{{ 'gabia' | password_hash('sha512') }}"
     update_password: on_create
