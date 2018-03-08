@@ -1,4 +1,4 @@
-- hosts: test1
+- hosts: "{{ host_list }}"
   name: Starting user_setting
   roles:
     - user_setting
